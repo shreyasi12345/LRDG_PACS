@@ -27,9 +27,9 @@ if __name__ == "__main__":
         logdir='./log',
         # data
         domain='pacs',
-        src='art,photo,cartoon',
-        trg='sketch',
-        datadir='./input',
+        src='Photos,Multispectral'',
+        trg='APR',
+        datadir='/scratch/ghoshs/large_files/FACT_LRDG/Dataset',
         train_trans='train',
         test_trans='test',
         # model

@@ -12,11 +12,11 @@ def add_args(parser):
                        help='Record name for saving')
     train.add_argument('--domain', type=str, default='pacs',
                        help='Dataset name')
-    train.add_argument('--src', type=str, default='art,photo,cartoon',
+    train.add_argument('--src', type=str, default='Photos,Multispectral',
                        help='Source domains')
-    train.add_argument('--trg', type=str, default='sketch',
+    train.add_argument('--trg', type=str, default='APR',
                        help='Target domain')
-    train.add_argument('--datadir', type=str, default='./input',
+    train.add_argument('--datadir', type=str, default='/scratch/ghoshs/large_files/FACT_LRDG/Dataset',
                        help='Path to dataset')
     train.add_argument('--logdir', type=str, default='./log',
                        help='Log directory')

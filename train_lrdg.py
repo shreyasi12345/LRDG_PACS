@@ -28,9 +28,9 @@ if __name__ == "__main__":
         logdir='./log',
         # data
         domain='pacs',
-        src='art,photo,cartoon',
-        trg='sketch',
-        datadir='./input',
+        src='Photos,Multispectral',
+        trg='APR',
+        datadir='/scratch/ghoshs/large_files/FACT_LRDG/Dataset',
         train_trans='train',
         test_trans='test',
         # model
@@ -104,6 +104,7 @@ if __name__ == "__main__":
     # --------------------------------------------------------------------------
     # data
     domain_datasets = datasets.get_data(args.domain)
+
     args.src_list = [e for e in args.src.split(',') if e != '']
 
     for e in args.src_list:
@@ -279,7 +280,7 @@ if __name__ == "__main__":
             print('\nimgs_src[0] ', imgs_src[0].size())
             print('\nlen_src ', len_src)
 
-            exit()
+            #exit()
 
             imgs_src = [imgs.to(device) for imgs in imgs_src]
             lbls_src = [lbls.to(device) for lbls in lbls_src]
